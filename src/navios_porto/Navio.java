@@ -15,9 +15,10 @@ public class Navio {
     private String matricula;
     private float comprimento;
     
-    public Navio(String matricula) {
+    public Navio(String matricula, String nome) {
         this.matricula = matricula;
-
+        this.nome = nome;
+        comprimento = 0;
     }
 
     public String getNome() {
@@ -38,5 +39,10 @@ public class Navio {
 
     public String getMatricula() {
         return matricula;
+    }
+    
+        @Override
+    public String toString() {
+        return "Navio{" + "matricula=" + matricula + ", nome=" + nome + ", comprimento=" + comprimento + '}';
     }
 }
